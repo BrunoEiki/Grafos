@@ -1,8 +1,10 @@
 #include <iostream>
 
-int main(){
-    return 0;
+#include "Grafo.h"
 
+int main(){
+    Grafo grafo(5);
+    grafo.insereAresta();
     
     // Implementar busca em profundidade
 

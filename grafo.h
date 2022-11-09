@@ -1,10 +1,20 @@
+#ifndef GRAFO_H
+#define GRAFO_H
+
 #include "Vertice.h"
 #include "Aresta.h"
 
-class Grafo : public Aresta, public Vertice{
+class Grafo{
 private:
-    Aresta aresta;
-    Vertice vertice;
+    int numVertices; // tamanho
+// Lista de Adjacencia
+    vector< vector< *Aresta > > listaAdj;
+
 public:
-    
+    Grafo( );
+    Grafo( int );
+
+    insereAresta( Vertice, float );
 };
+
+#endif
