@@ -1,3 +1,6 @@
+#ifndef VERTICE_H
+#define VERTICE_H
+
 #include <string>
 using std::string;
 
@@ -8,16 +11,22 @@ using std::vector;
 
 class Vertice{
 private:
-    string id;                   // numeros possuem a mesma ordem, seja como int ou string
+    int id;                    
     Vertice *predecessor;        // melhor usar ponteiros para objetos que usam muito memoria
     
 public:
-    Vertice( string );
-    ~Vertice( );
-    
-    string getId( );
-    void novoPredecessor( Vertice* );  // Assim que faz para armazenar endereço do vértice no vector?
+// CONSTRUTORES
+    Vertice( int );        // apenas com id
+    // Vertice( string );  // apresenta rotulo, como "Tokyo" ou "Belem"
+    ~Vertice( );           // destrutor
 
+// METODOS
+    int getId( );
+    void setPredecessor( Vertice* );  // Assim que faz para armazenar endereço do vértice no vector?
+
+// SOBRECARGA
     // Vertice operator=( const Vertice & );
 
 };
+
+#endif

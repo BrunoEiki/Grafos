@@ -1,16 +1,30 @@
 #include "Vertice.h"
 
-Vertice::Vertice( string id ){
+// CONSTRUTORES
+
+Vertice::Vertice( int id ){
     this->id = id;
     this->predecessor = nullptr;
 }
+
+// Vertice::Vertice( string etiqueta ){
+//     this->id = id;
+//     this->predecessor = nullptr;
+// }
 
 Vertice::~Vertice( ){
 
 }
 
-void Vertice::novoPredecessor( Vertice* vertice ){
+
+/* METODOS */ 
+
+void Vertice::setPredecessor( Vertice* vertice ){
     predecessor = vertice;
+}
+
+int Vertice::getId( ) {
+    return id;
 }
 
 // Vertice Vertice::operator=( const Vertice &vOther ){

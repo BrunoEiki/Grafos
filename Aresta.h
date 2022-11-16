@@ -1,22 +1,22 @@
-#include "Vertice.h"
+// #include "Vertice.h"
 
-#ifndef ARESTA_H
-#define ARESTA_H
+// #ifndef ARESTA_H
+// #define ARESTA_H
 
-class Aresta{
-private:
-    Vertice *origem;
-    Vertice *destino;
+// class Aresta{
+// private:
+//     Vertice *origem;
+//     Vertice *destino;
 
-    float peso; // ou talvez int    
+//     float peso; // ou talvez int    
 
-// Matriz de Adjacencia
+// // Matriz de Adjacencia
 
-public:
-    // Aresta( ); Construtor sem parametro sempre é necessário?  
-    Aresta( Vertice *, Vertice *, float );
-    Aresta( const Aresta & );
+// public:
+//     // Aresta( ); Construtor sem parametro sempre é necessário?  
+//     Aresta( Vertice *, Vertice *, float );
+//     Aresta( const Aresta & );
 
-};
+// };
 
-#endif
+// #endif
