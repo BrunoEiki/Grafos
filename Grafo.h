@@ -31,11 +31,12 @@ public:
     Grafo( int );
 
     bool checarAresta( int origem, int destino );
-
     void setAresta( int, int);
     void setAresta( int, int, float); // overload: faz aresta ponderada.
-
     void removeAresta( int origem, int destino );
+
+    void trocaDirecionado ( );
+    void trocaPonderado ( );
 
     void getListaAdj( );
 };

@@ -38,6 +38,12 @@ void Grafo::setAresta( int origem, int destino ){
 
 void Grafo::setAresta( int origem, int destino, float peso ){
 
+    if (origem < 0 || destino < 0) {
+        cout << "\nVertice de entrada ou saida invalido.";
+    }
+
+    // Checar se vertices ja existem na lista
+
     if ( peso < 1 ) {
         peso = 1.0;
     }
@@ -56,6 +62,10 @@ void Grafo::removeAresta( int origem, int destino ) {
 }
 
 bool Grafo::checarAresta( int origem, int destino ) {
+    /*
+    * Existe o vertice destino em origem?
+    */
+
     // ADICIONAR: modificar loop para ITERATOR
     for ( int i=0; i < listaAdj[origem].size(); i++ ) {
         if ( destino == listaAdj[origem][i] ) {
@@ -69,7 +79,30 @@ void Grafo::getListaAdj( ) {
     // ADICIONAR: mudar para ITERATOR depois
     for ( int i=0; i < numVertices; i++ ) {
         for ( int j=0; j < listaAdj[i].size( ); j++ ) {
-            std::cout << "Origem: " << i << " Destino: " << listaAdj[i][j] << " Peso: " << pesosAdj[i][j] << "\n";
+            if (ponderado) {
+                std::cout << "Origem: " << i << " Destino: " << listaAdj[i][j] << " Peso: " << pesosAdj[i][j] << "\n";
+            
+            } else {
+                std::cout << "Origem: " << i << " Destino: " << listaAdj[i][j] << " Peso: " << 1 << "\n";
+            }
         }
+    }
+}
+
+void Grafo::trocaDirecionado ( ) {
+    direcionado = !direcionado;
+    if (direcionado) {
+        cout << "\nGrafo Direcionado";
+    } else {
+        cout << "\nGrafo Nao-Direcionado";
+    }
+}
+
+void Grafo::trocaPonderado ( ) {
+    ponderado = !ponderado;
+    if (direcionado) {
+        cout << "\nGrafo Ponderado";
+    } else {
+        cout << "\nGrafo Nao-Ponderado";
     }
 }
